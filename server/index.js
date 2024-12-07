@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import multer from 'multer';
 const mainRouter = Router();
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: '/tmp/uploads' });
 
 
 
