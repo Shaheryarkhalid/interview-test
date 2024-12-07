@@ -1,0 +1,18 @@
+[build]
+  functions = "functions"
+  node_bundler = "esbuild"
+
+[functions]
+  directory = "server/functions"
+  node_bundler = "esbuild"
+
+[dev]
+  command = "netlify-lambda serve functions"
+  targetPort = 9000
+  port = 8888
+  publish = "public"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
